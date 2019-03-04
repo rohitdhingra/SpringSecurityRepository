@@ -8,5 +8,6 @@
 </head>
 <body>
 Welcome to My Spring Security Application
+<a href="/logout">logout</a>
 </body>
 </html>
