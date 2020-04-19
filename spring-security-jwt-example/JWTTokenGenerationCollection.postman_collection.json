@@ -1,0 +1,63 @@
+{
+	"info": {
+		"_postman_id": "5fb69571-6cc2-4e26-a952-3d537328d4b9",
+		"name": "JWTTokenGenerationCollection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:9192/",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyb2hpdCIsImV4cCI6MTU4NzMzNzU4OCwiaWF0IjoxNTg3MzAxNTg4fQ.jQXyE1z9hyG28bBjKzDY2gdPJWzr7dlmmw7T4JgfLyM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9192/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9192",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9192/authenticate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"userName\":\"rohit\",\n\t\"password\":\"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9192/authenticate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9192",
+					"path": [
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
