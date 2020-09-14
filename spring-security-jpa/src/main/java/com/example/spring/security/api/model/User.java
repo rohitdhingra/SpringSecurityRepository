@@ -20,7 +20,7 @@ public class User {
 	private String userName;
 	private String encPassword;
 	private String emailId;
-	@OneToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY)
+	@OneToMany(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
 	@JoinTable(name = "user_role",joinColumns = @JoinColumn(name = "userId",referencedColumnName = "user_id"),inverseJoinColumns = @JoinColumn(name="roleId",referencedColumnName = "role_id"))
 	private Set<Role> roles;
 	
