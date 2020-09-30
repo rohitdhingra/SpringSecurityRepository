@@ -20,7 +20,7 @@ public class InMemoryConfig extends WebSecurityConfigurerAdapter{
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-            auth.inMemoryAuthentication().withUser("user").password(passwordEncoder().encode("password")).roles("USER");
+            auth.inMemoryAuthentication().withUser("inmemory").password(passwordEncoder().encode("password")).roles("USER");
     }
 
     @Bean
