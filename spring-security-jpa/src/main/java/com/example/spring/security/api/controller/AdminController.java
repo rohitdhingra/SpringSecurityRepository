@@ -1,8 +1,6 @@
 package com.example.spring.security.api.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,16 +16,16 @@ public class AdminController {
 	@Autowired
 	private UserRepository userRepo;
 	
-	@Autowired
-	private BCryptPasswordEncoder encoder;
+//	@Autowired
+//	private BCryptPasswordEncoder encoder;
 	
-	@PreAuthorize("hasAnyRole('ADMIN')")
+//	@PreAuthorize("hasAnyRole('ADMIN')")
 	@PostMapping("/add")
 	public String addUserByAdmin(@RequestBody User user)
 	{
-		String passwd = user.getEncPassword();
-		String encPassword =encoder.encode(passwd);
-		user.setEncPassword(encPassword);
+//		String passwd = user.getEncPassword();
+//		String encPassword =encoder.encode(passwd);
+//		user.setEncPassword(encPassword);
 		userRepo.save(user);
 		return "User Addded successfully";
 	}
